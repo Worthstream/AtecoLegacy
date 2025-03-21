@@ -1,0 +1,144 @@
+
+
+<Ateco>
+    <Sezione>
+        <Codice>A</Codice>
+        <Titolo>AGRICOLTURA, SILVICOLTURA E PESCA</Titolo>
+        <Descrizione>
+            <CENTRALE>Nella sezione sono incluse le attività produttive che utilizzano le risorse di origine vegetale ed animale. La sezione include attività dell'agricoltura, della zootecnia, della silvicoltura, della cattura di animali in aree di allevamento o ripopolamento o nei loro habitat naturali.</CENTRALE>
+        </Descrizione>
+        <Divisione>
+            <Codice>01</Codice>
+            <Titolo>COLTIVAZIONI AGRICOLE E PRODUZIONE DI PRODOTTI ANIMALI, CACCIA E SERVIZI CONNESSI</Titolo>
+            <Descrizione>
+                <CENTRALE>Questa divisione include due attività di base, la produzione derivante da coltivazioni agricole e la produzione di prodotti animali; includendo anche le forme di agricoltura biologica, coltivazione di prodotti geneticamente modificati e l'allevamento di animali geneticamente modificati. Questa divisione include la coltivazione di colture in piena aria ed in serre. Questa divisione include le coltivazioni di colture fuori suolo, inclusa idroponica e acquaponica; l'acquaponica rappresenta un sistema produttivo che prevede la produzione combinata di prodotti agricoli e prodotti della pesca: le attività che utilizzano tale tecnica sono classificate nella divisione 01 solo se le coltivazioni agricole rappresentano il principale output dell'attività, altrimenti sono classificate nella divisione 03. Sono considerate coltivazioni ottenute con tecniche convenzionali anche quelle dove la pianta sia allevata in contenitori e non a terra. Inoltre, sono incluse le attività di servizio accessorie all'agricoltura, alla caccia e alle attività a queste relative. Il gruppo 01.5 (Coltivazioni agricole associate all'allevamento di animali: attività mista) costituisce una eccezione ai principi generali adottati per l'identificazione dell'attività principale. Si ammette che un'azienda agricola possa avere una ben bilanciata produzione sia agricola che animale. In questo caso sarebbe arbitrario classificare l'azienda in una categoria o nell'altra. L'attività agricola esclude qualsiasi lavorazione successiva dei prodotti agricoli (classificata nelle divisioni 10 e 11 (Produzione di prodotti alimentari e bevande) e nella divisione 12 (Produzione di prodotti del tabacco), ad eccezione di quelle necessarie per preparare i prodotti per i mercati primari. Comunque, come eccezione alla regola generale di classificazione delle attività svolte in maniera integrata, una unità che trasforma in prevalenza i propri prodotti agricoli all'interno dell'azienda viene classificata nella 01 (Agricoltura), anche se l'output normalmente è un prodotto della sezione C (Attività manifatturiere). Ne sono esempi: - la produzione di vino da uve prevalentemente proprie; - la produzione di olio di pressione da olive prevalentemente proprie. Dalla divisione sono esclusi i lavori di movimento terra per l'agricoltura (ad esempio: il terrazzamento di terreni agricoli, il drenaggio, la preparazione di risaie eccetera) classificati nella sezione F (Costruzioni) ed i gruppi di acquisto e le associazioni cooperative che svolgono attività di commercializzazione di prodotti agricoli, classificate nella sezione G. È anche esclusa l'attività di cura e manutenzione del paesaggio (81.30).</CENTRALE>
+            </Descrizione>
+            <Gruppo>
+                <Codice>1</Codice>
+                <Titolo>COLTIVAZIONE DI COLTURE AGRICOLE NON PERMANENTI</Titolo>
+                <Descrizione>
+                    <CENTRALE>Questo gruppo include la coltivazione di colture non permanenti, ossia piante che non durano più di due stagioni agricole. È inclusa la coltivazione di queste piante per la produzione di sementi.</CENTRALE>
+                </Descrizione>
+                <Classe>
+                    <Codice>1</Codice>
+                    <Titolo>Coltivazione di cereali (escluso il riso), legumi da granella e semi oleosi</Titolo>
+                    <Descrizione>
+                        <CENTRALE>Questa classe include tutte le forme di coltivazione di cereali, legumi da granella e semi oleosi in piena aria. Queste coltivazioni sono spesso combinate all'interno delle stesse unità agricole.</CENTRALE>
+                        <ESCLUSIONE>coltivazione di riso, cfr. 01.12 coltivazione di ortaggi, cfr. 01.13 coltivazione di granoturco dolce, cfr. 01.13 coltivazione di piante e sementi per la preparazione di fibre tessili, cfr. 01.16 produzione di sementi di piante da foraggio, cfr. 01.19 coltivazione di tuberi da foraggio, cfr. 01.19 coltivazione di mais da foraggio, cfr. 01.19 coltivazione di frutti oleosi, cfr. 01.26</ESCLUSIONE>
+                    </Descrizione>
+                    <Categoria>
+                        <Codice>1</Codice>
+                        <Titolo>Coltivazione di cereali (escluso il riso)</Titolo>
+                        <Descrizione></Descrizione>
+                        <Sottocategoria>
+                            <Codice>0</Codice>
+                            <Titolo>Coltivazione di cereali (escluso il riso)</Titolo>
+                            <Descrizione>
+                                <INCLUSIONE>-coltivazione di cereali quali: grano, mais, sorgo, orzo, segale, avena, miglio -coltivazione di altri cereali n.c.a. -produzione di sementi di cereali</INCLUSIONE>
+                                <Index>- estrazione di litantrace - estrazione di liquidi di gas naturale - desolforazione di gas</Index>
+                            </Descrizione>
+                        </Sottocategoria>
+                    </Categoria>
+                    <Categoria>
+                        <Codice>2</Codice>
+                        <Titolo>Coltivazione di semi oleosi</Titolo>
+                        <Descrizione></Descrizione>
+                        <Sottocategoria>
+                            <Codice>0</Codice>
+                            <Titolo>Coltivazione di semi oleosi</Titolo>
+                            <Descrizione>
+                                <INCLUSIONE>-coltivazione di semi oleosi quali: semi di soia, arachidi, cotone, ricino, lino, senape, semi del Niger, colza, cartamo, sesamo, girasole -coltivazione di altri semi oleosi -produzione di sementi di semi oleosi</INCLUSIONE>
+                                <Index>- lavaggio di lignite per facilitarne il trasporto - estrazione di sabbia bituminosa</Index>
+                            </Descrizione>
+                        </Sottocategoria>
+                    </Categoria>
+                    <Categoria>
+                        <Codice>3</Codice>
+                        <Titolo>Coltivazione di legumi da granella</Titolo>
+                        <Descrizione></Descrizione>
+                        <Sottocategoria>
+                            <Codice>0</Codice>
+                            <Titolo>Coltivazione di legumi da granella</Titolo>
+                            <Descrizione>
+                                <INCLUSIONE>-coltivazione di legumi da granella quali: fagioli, fave, ceci, lenticchie, lupini, piselli -coltivazione di altri legumi da granella -produzione di sementi di legumi da granella</INCLUSIONE>
+                                <Index/>
+                            </Descrizione>
+                        </Sottocategoria>
+                    </Categoria>
+                    <Categoria>
+                        <Codice>4</Codice>
+                        <Titolo>Coltivazioni miste di cereali, legumi da granella e semi oleosi</Titolo>
+                        <Descrizione></Descrizione>
+                        <Sottocategoria>
+                            <Codice>0</Codice>
+                            <Titolo>Coltivazioni miste di cereali, legumi da granella e semi oleosi</Titolo>
+                            <Descrizione>
+                                <Index/>
+                            </Descrizione>
+                        </Sottocategoria>
+                    </Categoria>
+                </Classe>
+                <Classe>
+                    <Codice>2</Codice>
+                    <Titolo>Coltivazione di riso</Titolo>
+                    <Descrizione></Descrizione>
+                    <Categoria>
+                        <Codice>0</Codice>
+                        <Titolo>Coltivazione di riso</Titolo>
+                        <Descrizione></Descrizione>
+                        <Sottocategoria>
+                            <Codice>0</Codice>
+                            <Titolo>Coltivazione di riso</Titolo>
+                            <Descrizione>
+                                <Index/>
+                            </Descrizione>
+                        </Sottocategoria>
+                    </Categoria>
+                </Classe>
+                <Classe>
+                    <Codice>3</Codice>
+                    <Titolo>Coltivazione di ortaggi e meloni, radici e tuberi</Titolo>
+                    <Descrizione>
+                        <ESCLUSIONE>coltivazione di mais, cfr. 01.11 coltivazione di mais da foraggio, cfr. 01.19 produzione di semi di barbabietola (esclusi quelli di barbabietola da zucchero), cfr. 01.19 coltivazione di fragole, cfr. 01.25 coltivazione di peperoncino, pepe e altre spezie e piante aromatiche, cfr. 01.28 coltivazione di miceli, cfr. 01.30 produzione di piantine di ortaggi per il trapianto, cfr. 01.30 raccolta di funghi e tartufi selvatici, cfr. 02.30</ESCLUSIONE>
+                    </Descrizione>
+                    <Categoria>
+                        <Codice>1</Codice>
+                        <Titolo>Coltivazione di ortaggi (inclusi i meloni) in foglia, a fusto, a frutto, in radici, bulbi e tuberi in piena aria (escluse barbabietola da zucchero e patate)</Titolo>
+                        <Descrizione></Descrizione>
+                        <Sottocategoria>
+                            <Codice>0</Codice>
+                            <Titolo>Coltivazione di ortaggi (inclusi i meloni) in foglia, a fusto, a frutto, in radici, bulbi e tuberi in piena aria (escluse barbabietola da zucchero e patate)</Titolo>
+                            <Descrizione>
+                                <INCLUSIONE>-coltivazione di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto -coltivazione di ortaggi a frutto come: cetrioli e cetriolini, melanzane, pomodori, peperoni, zucchine, fagiolini, angurie, meloni (cantalupo), altri meloni e vegetali da frutto -coltivazione di ortaggi in radici, bulbi o tuberi come: carote, rape, ravanelli, aglio, cipolle (incluso lo scalogno), porro e altri vegetali agliacei, altre radici, bulbi o tuberi -coltivazione di granoturco dolce -coltivazione di funghi e tartufi -produzione di sementi (esclusi i semi di barbabietola da zucchero, esclusi i semi delle altre barbabietole) -coltivazione di altri ortaggi</INCLUSIONE>
+                                <Index/>
+                            </Descrizione>
+                        </Sottocategoria>
+                    </Categoria>
+                    <Categoria>
+                        <Codice>2</Codice>
+                        <Titolo>Coltivazione di ortaggi (inclusi i meloni) in foglia, a fusto, a frutto, in radici, bulbi e tuberi in colture protette (escluse barbabietola da zucchero e patate)</Titolo>
+                        <Descrizione></Descrizione>
+                        <Sottocategoria>
+                            <Codice>1</Codice>
+                            <Titolo>Coltivazione di ortaggi (inclusi i meloni) in foglia, a fusto, a frutto, in radici, bulbi e tuberi in colture protette fuori suolo (escluse barbabietola da zucchero e patate)</Titolo>
+                            <Descrizione>
+                                <INCLUSIONE>-coltivazione fuori suolo (inclusa coltivazione idroponica e acquaponica) di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto -coltivazione fuori suolo (inclusa coltivazione idroponica e acquaponica) di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto -coltivazione fuori suolo (inclusa coltivazione idroponica e acquaponica) di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto -coltivazione fuori suolo (inclusa coltivazione idroponica e acquaponica) di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto -coltivazione fuori suolo (inclusa coltivazione idroponica e acquaponica) di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto -coltivazione fuori suolo (inclusa coltivazione idroponica e acquaponica) di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto -coltivazione fuori suolo (inclusa coltivazione idroponica e acquaponica) di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto</INCLUSIONE>
+                                <Index/>
+                            </Descrizione>
+                        </Sottocategoria>
+                        <Sottocategoria>
+                            <Codice>9</Codice>
+                            <Titolo>Coltivazione di ortaggi (inclusi i meloni) in foglia, a fusto, a frutto, in radici, bulbi e tuberi in colture protette ad esclusione delle colture fuori suolo (escluse barbabietola da zucchero e patate)</Titolo>
+                            <Descrizione>
+                                <INCLUSIONE>-coltivazione convenzionale di ortaggi in foglia o a fusto come: carciofi, asparagi, cavoli, cavolfiori e broccoli, lattuga e cicoria, spinaci, finocchi, sedano, altri ortaggi in foglia o a fusto -coltivazione convenzionale di ortaggi a frutto come: cetrioli e cetriolini, melanzane, pomodori, peperoni, zucchine, fagiolini, angurie, meloni (cantalupo), altri meloni e vegetali da frutto -coltivazione convenzionale di ortaggi in radici, bulbi o tuberi come: carote, rape, ravanelli, aglio, cipolle (incluso lo scalogno), porro e altri vegetali agliacei, altre radici, bulbi o tuberi -coltivazione convenzionale di granoturco dolce -coltivazione convenzionale di funghi e tartufi -produzione convenzionale di sementi (esclusi i semi di barbabietola da zucchero, esclusi i semi delle altre barbabietole) -coltivazione convenzionale di altri ortaggi</INCLUSIONE>
+                                <Index/>
+                            </Descrizione>
+                        </Sottocategoria>
+                    </Categoria>
+                </Classe>
+            </Gruppo>
+        </Divisione>
+    </Sezione>
+</Ateco>
+
+

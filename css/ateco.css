@@ -1,0 +1,454 @@
+/*TEMPLATE*/
+#ateco {
+/*	max-width: 525px;
+	min-height: 500px; */
+	font-family: 'Fira Sans', sans-serif !important;
+}
+a {
+	color: #244c5a; 
+}
+.ui-corner-all {
+	border-radius: 0 !important;
+} 
+
+#accordion-sezione .fa {
+    position: absolute !important;
+    right: 10px !important;
+}
+#boxAteco {
+	border: 2px #ccc solid;
+	padding: 10px;
+	border-radius: 5px;
+	moz-border-radius: 5px;
+	webkit-border-radius: 5px;
+	float: left;
+	margin-bottom: 2%;
+}
+
+#search {
+	width: 100%;
+}
+
+#result {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+}
+#navigationContent {
+	float: left;
+	clear: both;
+	float: left;
+	margin: 20px 0 25px 0;
+}
+
+h3 {
+	margin-bottom: 2px;
+}
+pre {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+    /* font-family: Roboto, sans-serif; */
+    margin: 5px;
+}
+#search form {
+	display: inline;
+}
+.codeAteco {
+	color: #da0d14;
+	cursor: pointer;
+	font-weight: bold;
+        width: 60px;
+        display: inline-block;
+        vertical-align: top;
+}
+.titleAteco {
+    width: 80%;
+    display: inline-block;
+}
+.codeFound {
+	font-weight: bold;
+        color: #da0d14;
+        cursor: pointer;
+        margin-right: 8px;
+}
+.last {
+	/*font-size: 12px;
+	color: #da0d14;
+	position: relative;
+	left: -40px;
+	width: 100%;
+	text-align: left;*/
+}
+.last li:before {
+    content: '' !important;
+}
+ul.last > li {
+    margin-left: -10px;
+    margin-bottom: 15px;
+}
+div.last {
+    border: 2px #ccc solid;
+    padding: 5px;
+    border-radius: 5px;
+    moz-border-radius: 5px;
+    webkit-border-radius: 5px;
+}
+.titleBlock {
+	/*width: 95%;*/
+	display: inline-block;
+}
+.codice {
+	margin-right: 5px;
+        /*width: 5%;
+        display: inline-block;*/
+        vertical-align: top;*/
+}
+.note {
+	font-size: 11px;
+        border: 2px #ccc solid;
+	padding: 5px;
+	border-radius: 5px;
+	moz-border-radius: 5px;
+	webkit-border-radius: 5px;
+        margin-left: 30px;
+        width: 85%;
+	margin-bottom: 5px;
+}
+button {
+	margin-bottom: 5px;
+}
+div.descrizione {
+	display: none;
+	z-index: 2;
+	border: 2px #ccc solid;
+	padding: 5px;
+	border-radius: 5px;
+	moz-border-radius: 5px;
+	webkit-border-radius: 5px;
+	font-size: 12px;
+}
+i {
+	display: inline-block;
+	float: right;
+}
+#navigate {
+	cursor: pointer;
+	color: #244c5a !important;
+}
+#resultList li {
+	margin-bottom: 10px;
+	float: left;
+}
+.ui-accordion-content li {
+	font-size: 12px;
+	font-weight: normal;
+}
+input.autoEncoding {
+	width: 270px;
+	margin-right: 10px;
+	float: left;
+}
+input.textSearch {
+	width: 270px;
+	margin-right: 10px;
+	float: left;
+}
+span.codeSearchGroup {
+	float: left;
+	/* width: 270px; */
+	margin-right: 18px;
+}
+/*#third {
+	margin-right: 123px;
+}*/
+.atecoHighlight {
+	color: #fff !important;
+	background-color: ForestGreen !important;
+	font-weight: bold;
+        padding: 1px;
+}
+.atecoExclusion {
+	color: blue;
+	font-weight: bold;
+}
+.ui-dialog {
+	border: 1px #ccc solid !important;
+}
+.caption {
+	display: block;
+	/* font-family: Roboto, sans-serif; */
+	font-size: 14px;
+	font-weight: bold;
+	clear: left;
+}
+span.description {
+	display: block;
+	/* font-family: Roboto, sans-serif; */
+	font-size: 11.5px;
+	color: #666;
+	clear: both;
+	float: left;
+	margin-bottom: 25px;
+}
+
+span.footer {
+	margin: 10px 0 10px 0;
+	font-size:14px;
+	color: #333;
+}
+span.note {
+	font-size: 11px;
+	float: left;
+	clear: both;	
+}
+span.button {
+	color: #fff;
+	float: left;
+	background-color: #888;
+	border-radius: 5px;
+	moz-border-radius: 5px;
+	webkit-border-radius: 5px;
+	padding: 3px 8px;
+	border: 1px #fff solid;
+	margin: -1px 185px 0 0;
+}
+span.button:hover {
+	cursor: pointer;
+}
+#faq:hover {
+	cursor: pointer;
+}
+#faqText {
+	display: none;
+	font-size: 12px !important;
+}
+#faqText li {
+	margin-bottom: 5px;
+}
+#faqText > ul {
+	list-style-type: none;
+}
+#faqText li > ul {
+	margin-left: 20px !important;
+	font-size: 11px !important;
+}
+.descrizione.last pre {
+	/*color: #666;
+	font-size: 11px;*/
+        display: block !important;        
+}
+.descriptionText {
+	display: none;
+	/* font-family: Roboto,sans-serif; */
+	float: left;
+	font-weight: normal;
+}
+#resultText h2 {
+	font-size: 12px;
+	/*width: 80%;*/
+	float: left;
+	clear: both;
+	font-weight: normal;
+	color: #333;
+}
+.openDescription {
+	cursor: pointer;
+	float: right;
+}
+.openDescription i {
+	/*margin-left: 15px;
+	margin-top: 2px;*/
+}
+#resultNavigate {
+	float: left;
+	margin: -15px 0 25px 0;
+	width: 100%;
+}
+#resultTextSearch {
+	float: left;
+	margin-bottom: 10px;
+}
+#resultEncodingSearch {
+	float: left;
+	margin: -15px 0 25px 0;
+	background-color: #eee;
+	border: 1px #eee solid;
+	border-radius: 5px;
+	moz-border-radius: 5px;
+	webkit-border-radius: 5px;
+	font-size: 11px !important;
+	padding: 15px;
+	display: none;
+}
+#resultEncodingSearch .btn {
+	color: #da0d14;
+	font-size: 11px;
+	margin-top: 15px;
+}
+#resultTitle {
+	font-size: 120%;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+#textHeader {
+	float: left;
+	margin: 3px 0 10px 0;
+}
+.backAteco {
+	/* font-family: Roboto; */
+	font-size: 11px;
+	color: #da0d14;
+	cursor: pointer;
+	float: right;
+	margin-top: 10px;
+        clear: both;
+}
+.html {
+	/* font-family: Roboto; */
+}
+.nota h5 {
+	margin-top: 5px;
+}
+#atecoDownload {
+	padding: 10px;
+	border: 2px #ccc solid;
+	float: left;
+	border-radius: 5px;
+	moz-border-radius: 5px;
+	webkit-border-radius: 5px;
+	/*width: 95%;*/
+}
+
+#ateco h2.atecoTitle {
+	color: #333 !important;
+	margin: 20px 0 -4px 5px !important;
+	float: left;
+	width: 100%;
+}
+#atecoDownload dl {
+	float: left;
+	width: 48%;
+	margin: 5px 0;
+}
+#atecoDownload dl.clear {
+	width: 100%;
+}
+#atecoDownload dd:before {
+	content: '';
+	display: none;
+}
+#atecoDownload dt {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+#atecoDownload dd {
+	font-size: 12px;
+	margin-left: 0px;
+}
+#atecoDownload span.size {
+	font-size: 10px;
+	color: #444;
+	float: right;
+	margin-right: 15px;
+}
+#resultText .found {
+	display: block;
+	float: left;
+	width: 500px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.openDescription i {
+	/*float: right;*/
+}
+.raccordi {
+	margin-left: 19px !important;
+}
+#atecoInfo {
+	float: left;
+	clear:both;
+	color: #666;
+        margin-top: 15px;
+}
+pre .atecoCodeRef {
+	color: #da0d14;
+	cursor: pointer;
+}
+
+
+
+.titoloInside {
+    /*display: inline-block;
+    width: 92%;*/
+    /* font-family: Roboto, sans-serif; */
+}
+.atecoCodeRef {
+    vertical-align: top;
+}
+.loading {
+    color: #333;
+    /* font-family: Roboto,sans-serif; */
+}
+.noresult {
+    background-color: ForestGreen;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px;
+}
+#atecoInformazioni {
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+.titleAtecoInformazioni {
+	color: #333 !important;
+	margin: 20px 0 -4px 5px !important;
+	float: left;
+	width: 100%;
+	font-weight: bolder;
+	font-size: 1.3em;
+}
+
+.textAtecoInformazioni {
+	padding: 10px;
+	float: left;
+}
+.textAtecoInformazioni span {
+	display: block;
+	margin-top: 10px;
+}
+.little {
+  font-size: 12px;
+  display: block;
+  font-weight: normal;
+}
+#readMoreNote {
+  color: #da0d14;
+  cursor: pointer;
+}
+.noteHidden {
+  display: none;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+legend {
+  padding: 0;
+}
+span.app {
+    margin: 0 75px 5px 0;
+    font-weight: bold;   
+    font-size: 16px;
+    position: relative;
+    top: -15px;    
+}
+.app img {
+    margin-right: 15px;
+}
