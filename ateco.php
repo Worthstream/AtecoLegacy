@@ -13,7 +13,6 @@
 <meta http-equiv="Content-Language" content="it_IT" />
 <title>Istat - Ateco 2007</title>
 <script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/iface.js"></script>
 <script type="text/javascript" src="js/ateco.js"></script>
 <script>
 var www_istat_it = {state: {lang:  'it'},userFontSize: { init: function() {}},resizeHeight: function () {}};

@@ -2,7 +2,7 @@
 /*
 Media "screen" style sheet.
 */
-@import "/css/continuous.css";
+@import "/css/all.css";
 @media screen {
 	:focus {outline:none;}
 	::-moz-focus-inner {border:0;}
