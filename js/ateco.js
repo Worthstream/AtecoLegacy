@@ -88,7 +88,7 @@ var atecoJS = {
 	textualSearch: function(text) { //try a textual research on ateco matching the text passed as parameter
 			$('#resultEncodingSearch').hide();
 			$.ajax({
-				url: '/iframes/ateco/search.php',
+				url: 'search.php',
 				method: 'post',
 				data: {'title': text },
 				success: function (data) {
