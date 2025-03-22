@@ -37,7 +37,7 @@ var volumiCarousel = function () {};
 <a name='top' ></a>
 <section id='search'>
 	<label for='autoEncoding' class='caption'>Individua un codice attività</label>
-	<input id='autoEncoding' type='text' class='autoEncoding' placeholder='Descrizione attività' ></input>
+	<input id='autoEncoding' type='text' class='autoEncoding' placeholder='Descrizione attività' disabled></input>
 		<span class='autoEncoding button'><span class="fa fa-play" title="Cerca"></span></span>
 		<span class='description'>La ricerca per codice attività è temporaneamente non disponibile</span>
 		<section id='resultEncodingSearch'></section>
