@@ -1,27 +1,20 @@
 <!DOCTYPE HTML>
 <html lang='it'>
 <head>
-<link href="/css/html.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/istat.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="www.istat.it//favicon.ico" rel="shortcut icon" />
 <link href="/css/screen.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/css/handheld.css" media="handheld" rel="stylesheet" type="text/css" />
-<link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
-<link href="/iframes/ateco/css/ateco.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/iframes/ateco/css/fontawesome.min.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/css/ateco.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/fontawesome.min.css" media="all" rel="stylesheet" type="text/css" />
 <link href="/css/google-fonts.css?family=Fira+Sans+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Fira+Sans+Extra+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;amp;subset=latin-ext" rel="stylesheet">
-<!--[if IE]> <link href="/css/trident.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
-<!-- <link href="/css/google-fonts.css?family=Roboto|Roboto+Condensed:900,700,500,400,300" media="all" rel="stylesheet" type="text/css" /> -->
-<link href="/css/jquery-ui-main.css" media="all" rel="stylesheet" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 <meta http-equiv="Content-Language" content="it_IT" />
 <title>Istat - Ateco 2007</title>
 <script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/jquery-migrate.js"></script>
-<script type="text/javascript" src="/js/jquery-ui1.js"></script>
-<script type="text/javascript" src="/js/www_istat_it.js"></script>
 <script type="text/javascript" src="/js/iface.js"></script>
-<script type="text/javascript" src="/iframes/ateco/js/ateco.js"></script>
+<script type="text/javascript" src="js/ateco.js"></script>
 <script>
 var www_istat_it = {state: {lang:  'it'},userFontSize: { init: function() {}},resizeHeight: function () {}};
 var volumiCarousel = function () {};

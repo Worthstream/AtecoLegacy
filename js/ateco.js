@@ -25,10 +25,10 @@ var atecoJS = {
 				}
 				html += '<div align="right" style="background-color: #eee;"><input type="submit" name="sub" value="Conferma" class="btn" title="Conferma della selezione"></div></form></div>';
 				if(data['risultato'] == 'falliti') {
-				  html = '<div class="nota"><h5 style="font-size:110%">Ricerca fallita!</h5></div><div id="testo">La descrizione fornita non è sufficiente ad individuare un codice di attività. Si consiglia di rileggere con attenzione le indicazioni per l’attribuzione del codice di attività economica. Si ricorda di non  utilizzare abbreviazioni, riferimenti ad articoli di legge o alla forma societaria dell’azienda. Inoltre si ricorda di usare solo descrizioni della propria attività economica e non quelle relative alla propria attività professionale (dirigente, impiegato, lavoratore autonomo, idraulico, professore, direttore, ecc.)</div>';
+				  html = '<div class="nota"><h5 style="font-size:110%">Ricerca fallita!</h5></div><div id="testo">La descrizione fornita non Ã¨ sufficiente ad individuare un codice di attivitÃ . Si consiglia di rileggere con attenzione le indicazioni per lâ€™attribuzione del codice di attivitÃ  economica. Si ricorda di non  utilizzare abbreviazioni, riferimenti ad articoli di legge o alla forma societaria dellâ€™azienda. Inoltre si ricorda di usare solo descrizioni della propria attivitÃ  economica e non quelle relative alla propria attivitÃ  professionale (dirigente, impiegato, lavoratore autonomo, idraulico, professore, direttore, ecc.)</div>';
 				}
 				if(generic)
-				  html = '<div class="nota"><h5 style="font-size:110%">Attenzione!</h5></div><div id="testo">La descrizione è insufficiente o troppo generica. Si consiglia di rileggere attentamente le indicazioni per l’attribuzione del codice di attività.</div>';
+				  html = '<div class="nota"><h5 style="font-size:110%">Attenzione!</h5></div><div id="testo">La descrizione Ã¨ insufficiente o troppo generica. Si consiglia di rileggere attentamente le indicazioni per lâ€™attribuzione del codice di attivitÃ .</div>';
 				$('#resultEncodingSearch').html(html);
 			},
 			error: function (xhr, ajaxOptions, thrownError) {

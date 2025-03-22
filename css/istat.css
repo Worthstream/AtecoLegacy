@@ -1,0 +1,281 @@
+
+#ateco * {
+	font-family: "Manrope", sans-serif;
+	font-size: 16px;
+	color: var(--petrolio);
+	line-height: 24px;
+}
+
+#ateco #boxAteco {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#ateco label {
+	display: inline-block;
+}
+
+#ateco input[type=text] {
+	display: inline-block;
+	padding: 8px;
+	border: 1px solid;
+	border-radius: 0.375rem;
+	border-color: var(--petrolio);
+	margin: 0 5px;
+}
+
+#ateco span.button,
+#ateco button.button {
+	float: right;
+	margin: 0 5px;
+	padding: 6px 12px;
+	border: 0;
+	border-radius: 5px;
+	background-color: var(--petrolio);
+	color: var(--white);
+}
+#ateco span.button.disable,
+#ateco button.button:disabled {
+	opacity: 0.5;
+	cursor: auto;
+}
+
+#ateco .fa.fa-play {
+	color: var(--white);
+}
+#ateco .fa.fa-play:before {
+	content: "";
+}
+
+/* ricerca per codice attività - 1 */
+#ateco #search .description {
+	display: block;
+	margin: 16px 0;
+}
+
+/* ricerca per codice attività - 2 */
+#ateco #resultEncodingSearch {
+	background-color: transparent;
+	margin: 0;
+	padding: 6px 8px;
+	border: 1px solid;
+	border-color: var(--grigio-medium);
+	border-radius: 5px;
+}
+
+#ateco #resultEncodingSearch input[type=radio] {
+	margin: 0 5px 0 0;
+}
+#ateco #resultEncodingSearch label {
+	display: inline-block;
+}
+
+#ateco #resultEncodingSearch .confirmSelection.button, 
+#ateco #resultEncodingSearch .backAteco.button {
+	margin: 0 -2px 0 0;
+}
+
+#ateco #resultEncodingSearch ul {
+	margin: 0 0 8px 0;
+}
+#ateco #resultEncodingSearch li {
+	margin: 0;
+}
+
+#ateco #resultEncodingSearch .nota {
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+
+#ateco #resultNavigate {
+	margin-top: 0;
+}
+
+#ateco #resultNavigate .error {
+	color: var(--rosso);
+}
+
+/* ricerca testuale */
+#ateco #resultTextSearch .noresult {
+	padding: 0;
+	background-color: transparent;
+}
+
+#ateco #textHeader {
+	margin: 0 0 16px;
+}
+
+#ateco #resultText .found {
+	position: relative;
+	width: auto;
+}
+
+#ateco #resultTextSearch .sectionAteco {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 75px;
+	color: var(--azzurro);
+}
+
+#ateco #resultTextSearch .codeAteco {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 75px;
+}
+
+#ateco #resultTextSearch .titleAteco {
+	width: auto;
+	margin-left: 75px;
+	margin-right: 36px;
+}
+
+#ateco #resultTextSearch .fa {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#ateco #resultTextSearch .descriptionText {
+	margin-top: 8px;
+	margin-left: 75px;
+	padding: 6px 8px;
+	border: 1px solid;
+	border-color: var(--grigio-medium);
+}
+#ateco #resultTextSearch .descriptionText pre {
+	margin: 0;
+}
+
+#ateco #search .description.footer {
+	display: inline-block;
+	margin: 0;
+	padding-top: 9px;
+}
+
+/* intera classificazione + stili accordions */
+
+#ateco #accordion-divisione.ui-accordion h2.ui-accordion-header,
+#ateco .ui-state-default {
+	min-height: 24px;
+	padding: 8px 0;
+	border: 0;
+	background: none;
+	background-color: var(--white);
+}
+
+#ateco .ui-accordion-header-active.ui-state-active .titleBlock {
+	font-weight: 800;
+}
+#ateco .ui-accordion-header-collapsed .titleBlock:hover *, 
+#ateco .ui-accordion-header-active.ui-state-active .titleBlock:hover * {
+	color: var(--azzurro);
+}
+
+#ateco .ui-accordion-header-icon.ui-icon.ui-icon-triangle-1-e, 
+#ateco .ui-accordion-header-icon.ui-icon.ui-icon-triangle-1-s {
+	float: left;
+	position: inherit;
+	top: 0;
+	left: 0;
+	content: "";
+	background-size: 100%;
+	margin: 0;
+	width: 28px;
+	height: 28px;
+	background-position: top left;
+}
+#ateco .ui-accordion-header-icon.ui-icon.ui-icon-triangle-1-e {
+	background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.0821 3.00011C13.8503 3.00373 13.6293 3.09924 13.4678 3.26565C13.3063 3.43206 13.2175 3.65577 13.2208 3.88764V13.221H3.88746C3.77151 13.2193 3.6564 13.2408 3.5488 13.284C3.4412 13.3272 3.34327 13.3914 3.2607 13.4728C3.17812 13.5542 3.11256 13.6513 3.0678 13.7582C3.02305 13.8652 3 13.98 3 14.096C3 14.2119 3.02305 14.3267 3.0678 14.4337C3.11256 14.5407 3.17812 14.6377 3.2607 14.7191C3.34327 14.8005 3.4412 14.8647 3.5488 14.908C3.6564 14.9512 3.77151 14.9726 3.88746 14.971H13.2208V24.3043C13.2192 24.4203 13.2406 24.5354 13.2838 24.643C13.3271 24.7506 13.3912 24.8485 13.4727 24.9311C13.5541 25.0136 13.6511 25.0792 13.7581 25.124C13.865 25.1687 13.9798 25.1918 14.0958 25.1918C14.2118 25.1918 14.3266 25.1687 14.4335 25.124C14.5405 25.0792 14.6375 25.0136 14.7189 24.9311C14.8003 24.8485 14.8645 24.7506 14.9078 24.643C14.951 24.5354 14.9724 24.4203 14.9708 24.3043V14.971H24.3041C24.4201 14.9726 24.5352 14.9512 24.6428 14.908C24.7504 14.8647 24.8483 14.8005 24.9309 14.7191C25.0135 14.6377 25.079 14.5407 25.1238 14.4337C25.1685 14.3267 25.1916 14.2119 25.1916 14.096C25.1916 13.98 25.1685 13.8652 25.1238 13.7582C25.079 13.6513 25.0135 13.5542 24.9309 13.4728C24.8483 13.3914 24.7504 13.3272 24.6428 13.284C24.5352 13.2408 24.4201 13.2193 24.3041 13.221H14.9708V3.88764C14.9725 3.77053 14.9506 3.65427 14.9065 3.54575C14.8625 3.43724 14.7971 3.33868 14.7142 3.25591C14.6313 3.17314 14.5327 3.10786 14.4241 3.06391C14.3155 3.01997 14.1992 2.99828 14.0821 3.00011Z' fill='%23192038'/%3E%3C/svg%3E ");
+	background-repeat: no-repeat;
+	transition: var(--bs-accordion-btn-icon-transition);
+}
+#ateco .ui-accordion-header-icon.ui-icon.ui-icon-triangle-1-s {
+	background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.78981 13.1251C3.67386 13.1234 3.55874 13.1449 3.45114 13.1881C3.34355 13.2313 3.24562 13.2955 3.16304 13.3769C3.08047 13.4584 3.0149 13.5554 2.97014 13.6623C2.92539 13.7693 2.90234 13.8841 2.90234 14.0001C2.90234 14.116 2.92539 14.2309 2.97014 14.3378C3.0149 14.4448 3.08047 14.5418 3.16304 14.6232C3.24562 14.7046 3.34355 14.7688 3.45114 14.8121C3.55874 14.8553 3.67386 14.8767 3.78981 14.8751H24.2065C24.3224 14.8767 24.4375 14.8553 24.5451 14.8121C24.6527 14.7688 24.7507 14.7046 24.8332 14.6232C24.9158 14.5418 24.9814 14.4448 25.0261 14.3378C25.0709 14.2309 25.0939 14.116 25.0939 14.0001C25.0939 13.8841 25.0709 13.7693 25.0261 13.6623C24.9814 13.5554 24.9158 13.4584 24.8332 13.3769C24.7507 13.2955 24.6527 13.2313 24.5451 13.1881C24.4375 13.1449 24.3224 13.1234 24.2065 13.1251H3.78981Z' fill='%23192038'/%3E%3C/svg%3E ");
+	transform: none;
+}
+
+#ateco .ui-accordion .ui-accordion-icons {
+	padding-left: 0;
+}
+
+#ateco #accordion-sezione .fa {
+	position: inherit;
+}
+
+#ateco .titleBlock {
+	display: block;
+	margin-left: 36px;
+	margin-right: 36px;
+}
+#ateco .titleBlock * {
+	line-height: 28px;
+}
+
+#ateco .fa.fa-bars, 
+#ateco .fa.fa-times {
+	top: 10px;
+	font-family: 'Istat' !important;
+	font-size: 18px;
+	font-weight: 700px;
+}
+#ateco .fa.fa-bars:hover, 
+#ateco .fa.fa-times:hover {
+	color: var(--azzurro);
+}
+#ateco .fa.fa-bars:before {
+	content: "\e931";
+}
+#ateco .fa.fa-times:before {
+	content: "\e927";
+}
+
+#ateco div.descrizione {
+	margin-top: 8px;
+	margin-left: 36px;
+	padding: 6px 8px;
+	border: 1px solid;
+	border-color: var(--grigio-medium);
+}
+#ateco div.descrizione pre {
+	margin: 0;
+}
+
+#ateco .ui-widget-content {
+	margin-left: 36px;
+	padding: 0;
+	border: 0;
+}
+
+#ateco ul.last {
+	margin: 0;
+}
+#ateco ul.last li {
+	margin: 0;
+	padding: 8px 0;
+}
+
+#ateco div.last {
+	margin-top: 8px;
+	padding: 6px 8px;
+	border: 1px solid;
+	border-color: var(--grigio-medium);
+}
+#ateco div.last pre {
+	margin: 0;
+}
+
+#ateco .atecoExclusion {
+	color: var(--azzurro);
+}
+
+#ateco .codice.atecoHighlight .atecoCodeRef, 
+#ateco .ui-accordion-header-collapsed .titleBlock:hover .codice.atecoHighlight .atecoCodeRef, 
+#ateco .ui-accordion-header-active.ui-state-active .titleBlock:hover .codice.atecoHighlight .atecoCodeRef {
+	color: var(--white);
+}
+#ateco pre .atecoCodeRef {
+	color: var(--rosso);
+}
+
