@@ -2,7 +2,8 @@
 /**
  * Class to build the ATECO client, for textual and advanced research
  * Author: Paolo Di Domenico
- * Version: 1.0
+ * Author: Valerio De Camillis
+ * Version: 1.1 (2025-03-23)
  */
 class atecoXml {
 
@@ -19,8 +20,8 @@ class atecoXml {
 	 * the tree function can take better benefit from the simple cache method implemented
 	 */
 	private function _parseXml() {
-		$this->xml = simplexml_load_file('data/XML_struttura_estesa.xml');
-		$this->xsl = "lib/template2.xsl";
+		$this->xml = simplexml_load_file('data/ateco.xml');
+		$this->xsl = "lib/template.xsl";
 	}
 
 	/**
