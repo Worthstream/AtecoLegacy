@@ -41,41 +41,6 @@
 		<div id='navigationContent' style='display:none'></div>
 	</section>
 </div>
-<!--
-<h2 class='atecoTitle'>Area download</h2>
-<div id='atecoDownload'>
-<dl><dt>Classificazione</dt>
-<dd><a href='/it/files/2011/03/STRUTTURA.zip?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Ateco+2007.zip'>Struttura in versione XLS</a><span class='size'> (zip 132 KB)</span></dd>
-<dd><a href='/it/files/2011/03/ateco_xml.zip?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Ateco+2007+-+Versione+XML.zip'>Struttura in versione XML</a><span class='size'> (zip 176 KB)</span></dd>
-<dd><a href='/it/files/2011/03/note_esplicative_ateco.pdf?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Ateco+2007+-+Note+esplicative.pdf'>Note esplicative</a><span class='size'> (pdf 1 MB)</span></dd>
-<dd><a href='/it/files/2011/03/lista_alfabetica_ateco.pdf?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Ateco+2007+-+Elenco+alfabetico.pdf'>Elenco alfabetico</a><span class='size'> (pdf 1013 KB)</span></dd>
-<dd><a href='/it/files/2011/03/metenorme09_40classificazione_attivita_economiche_2007.pdf?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Ateco+2007+-+Volume+integrale.pdf'>Volume integrale Ateco 2007</a><span class='size'> (pdf 3 MB)</span></dd>
-<dd><a href='/it/files/2011/03/ateco2002.pdf?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Ateco+2002+-+Volume+integrale.pdf'>Volume integrale Ateco 2002</a><span class='size'> (pdf 3 MB)</span></dd>
-</dl>
-<dl class='raccordi'><dt>Raccordi</dt>
-<dd><a href='/it/files/2011/03/Raccordo_Ateco_2002-2007.zip?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Raccordo+Ateco+2002-2007.zip'>Ateco 2002 - Ateco 2007</a><span class='size'> (zip 53 KB)</span></dd>
-<dd><a href='/it/files/2011/03/Tavola_raccordo_Ateco2007-2002_12-12-08.pdf?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Raccordo+Ateco+2007-2002.pdf'>Ateco 2007 - Ateco 2002</a><span class='size'> (pdf 265 KB)</span></dd>
-<dd><a href='/it/files/2011/03/TABELLA_DI_RACCORDO_ATECOFIN2004_ATECO2007.pdf?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Raccordo+Atecofin+2004+-+Ateco+2007.pdf'>Atecofin 2004 - Ateco 2007</a><span class='size'> (pdf 97 KB)</span></dd>
-<dd><a href='/it/files/2011/03/raccordoateco91_02.pdf?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Raccordo+Ateco+1991-2002.pdf'>Ateco 1991 - Ateco 2002</a><span class='size'> (pdf 419 KB)</span></dd>
-<dd><a href='/it/files/2011/03/raccordoateco02_91.pdf?title=Classificazione+Ateco+2007+-+01%2Fott%2F2009+-+Raccordo+Ateco+2002-1991.pdf'>Ateco 2002 - Ateco 1991</a><span class='size'> (pdf 418 KB)</span></dd>
-</dl>
-
-<dl class='clear'>
-<dt>Includi questo strumento nel tuo sito</dt>
-<dd>
-<label for='embedded' style='display:none'>Codice da incorporare</label>
-<textarea id='embedded' cols="60" style="font-size: 11px;color: #666;">&lt;iframe src='http://www.istat.it/iframes/ateco/ateco.php' width='550' height='600' frameborder='0'&gt;&lt;/iframe&gt;</textarea>
-</dd></dl>
-
-<dl class='clear'>
-<dt>Scarica l'app</dt>
-<dd>
-<a href='https://play.google.com/store/apps/details?id=it.istat.ateco'><img title='google play' src='/img/googleplay.png' style='margin-right:5px'/></a>
-<a href='https://itunes.apple.com/us/app/ateco/id1113945834?ls=1&mt=8'><img title='iOS app store' src='/img/appstore.png' /></a>
-</dd></dl>
-</div>
--->
-<!--span class='description footer'>I file contenenti i raccordi Ateco 2002 e 2007, il raccordo Atecofin 2004 e Ateco 2007, i raccordi Ateco 1991 e 2002  sono disponibili all'indirizzo <a href='/it/archivio/17888'>www.istat.it/it/archivio/17888</a>.</span-->
 
 
 <div id='faqText' title='Suggerimenti per la ricerca'>

@@ -11,6 +11,7 @@ class atecoXml {
 	 * ATECO in simple _xml
 	 */
 	private $xml;
+	private $xsl;
 
 	/**
 	 * Parse the xml into the class property
@@ -18,7 +19,8 @@ class atecoXml {
 	 * the tree function can take better benefit from the simple cache method implemented
 	 */
 	private function _parseXml() {
-		$this->xml = simplexml_load_file('data/ateco.xml');
+		$this->xml = simplexml_load_file('data/XML_struttura_estesa.xml');
+		$this->xsl = "lib/template2.xsl";
 	}
 
 	/**
@@ -221,7 +223,7 @@ class atecoXml {
 		}
 		$this->_parseXml();
 		$xslDoc = new DOMDocument();
-		$xslDoc->load("lib/template.xsl");
+		$xslDoc->load($this->xsl);
 		$proc = new XSLTProcessor();
 		$proc->importStylesheet($xslDoc);
 		$html = $proc->transformToXML($this->xml);

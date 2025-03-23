@@ -7,7 +7,7 @@ require_once('config.php');
 if (isset($_POST['Logout']) || !isset($_SESSION['session_id'])) {
 	session_destroy();
 	session_unset();
-	$url = 'report.php';//'http://www.istat.it/iframes/ateco/report.php';
+	$url = 'report.php';
 	header( 'Content-type: text/html; charset=utf-8' ); // make sure this is set
 	header("Location: " . $url, true, 307); // 307 is temporary redirect
 	echo "<html></html>";  // - Tell the browser there the page is done

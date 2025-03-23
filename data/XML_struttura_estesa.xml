@@ -48,7 +48,7 @@ Dalla divisione sono esclusi i lavori di movimento terra per l'agricoltura (ad e
 <INCLUSIONE> -coltivazione di cereali quali: grano, mais, sorgo, orzo, segale, avena, miglio  •coltivazione di altri cereali n.c.a.</INCLUSIONE>
 <INCLUSIONEAGGIUNTIVA> -produzione di sementi di cereali</INCLUSIONEAGGIUNTIVA>
 <IMPLEMENTATIONRULE>implementation Rule</IMPLEMENTATIONRULE>
-<INDEX></INDEX>
+<INDEX>indextest</INDEX>
 <ESCLUSIONE>NOta eslusione</ESCLUSIONE>
 </Descrizione>
 </Sottocategoria>

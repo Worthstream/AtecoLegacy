@@ -3,7 +3,7 @@ var codeChosed = '';
 var atecoJS = {
 	getData: function(key) { //download the first result (radio button) from ateco_actr service
 		$('#resultEncodingSearch').show();
-		var url = "/iframes/ateco/atecor.php";
+		var url = "atecor.php";
 		var generic = false;
 		$.ajax({
 			url: url,
@@ -48,7 +48,7 @@ var atecoJS = {
                 })
 	},
 	pushResponse: function(code,name) { //push the final response of the ateco_actr service in the page (build from decode.json file)
-		$.getJSON('/iframes/ateco/data/decode.json',function (data) {
+		$.getJSON('data/output.txt',function (data) {
 			$('#resultEncodingSearch').html('<div id="resultTitle">Risultati della ricerca di \"' + keySearched.toUpperCase() + '\"<span class="little">a seguito della selezione: '+name.toLowerCase() +'</span></div><ul id="resultList"/>');
 			$.each(data, function (index,value) {
 				var note = '';
@@ -112,7 +112,7 @@ var atecoJS = {
 		$(container).show();
 		$(container).html('<span class="loading">Caricamento in corso...&nbsp;</span><img src="/img/loaderAjax.gif" title="Caricamento in corso" />');
 		$.ajax({
-			url: '/iframes/ateco/tree.php',
+			url: 'tree.php',
 			success: function (data) {
 				$(container).html(data);
 			}
