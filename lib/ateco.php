@@ -2,9 +2,18 @@
 /**
  * Class to build the ATECO client, for textual and advanced research
  * Author: Paolo Di Domenico
- * Author: Valerio De Camillis
- * Version: 1.1 (2025-03-23)
+ * Version: 1.0
  */
+
+//require_once('../../../../wp-config.php');
+
+if ( ! getenv('WP_BASE_PATH') )
+	putenv('WP_BASE_PATH=' . __DIR__);
+if ( ! getenv('RELPATHATECO2025') )
+	putenv('RELPATHATECO2025=' . '/wp-content/storage/web/ateco2025/');
+if ( ! getenv('SCRIPTPATHATECO2025') )
+	putenv('SCRIPTPATHATECO2025=' . '/wp-content/themes/EGPbs5-child/ateco2025/');
+
 class atecoXml {
 
 	/**
@@ -20,9 +29,24 @@ class atecoXml {
 	 * the tree function can take better benefit from the simple cache method implemented
 	 */
 	private function _parseXml() {
-		$this->xml = simplexml_load_file('data/ateco.xml');
-		$this->xsl = "lib/template.xsl";
+		$primaryPath = getenv('WP_BASE_PATH') . getenv('RELPATHATECO2025');
+		$secondaryPath = getenv('WP_BASE_PATH') . getenv('SCRIPTPATHATECO2025');
+		
+		if (file_exists($primaryPath . 'data/ateco.xml')) {
+		    $this->xml = simplexml_load_file($primaryPath . 'data/ateco.xml');
+		} else {
+    		$this->xml = simplexml_load_file($secondaryPath . 'data/ateco.xml');
+		}
+
+		if (file_exists($primaryPath . "lib/template.xsl")) {
+		    $this->xsl = $primaryPath . "lib/template.xsl";
+		} else {
+    		$this->xsl = $secondaryPath . "lib/template.xsl";
+		}	
 	}
+
+
+
 
 	/**
 	 * Build the Ateco code from an array of codes
@@ -75,14 +99,14 @@ class atecoXml {
 		$x=0;$result = array();
 		foreach($paramSearch as  $v) {
 			if(strlen($v) > 3) {
-                                $v=strtolower($v);
+                $v=strtolower($v);
 				//$title = $this->xml->xpath("//titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.;:-(),', 'abcdefghijklmnopqrstuvwxyz       '),' ". $v." ')]/..");
-				$title = $this->xml->xpath("//titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'".$v."')]/..");
+				$title = $this->xml->xpath("//titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'" . trim($v) . "')]/..");
 				if(!$title) $title = array();
 				$title = $this->_cleanXml($title,$v,'titolo');
 				
 				//$description = $this->xml->xpath("//descrizione[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.;:-,()', 'abcdefghijklmnopqrstuvwxyz       '),' ". $v." ')]/..");
-				$description = $this->xml->xpath("//descrizione[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'". $v."')]/..");
+				$description = $this->xml->xpath("//descrizione[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'" . trim($v) . "')]/..");
 				if(!$description) $description = array();
 				$description = $this->_cleanXml($description,$v,'descrizione');
 				
@@ -137,7 +161,7 @@ class atecoXml {
 	 * @return int the level of the class
 	 */
 	private function _findLevel($xml) {
-                if(array_key_exists('divisione',$xml))
+		if(array_key_exists('divisione',$xml))
 			return 'sezione';
 		if(array_key_exists('gruppo',$xml))
 			return 'divisione';
@@ -161,7 +185,8 @@ class atecoXml {
 		$found = $this->_find($paramSearch);
 		foreach($found as $el) {
 			foreach($el['xml'] as $xml) {
-				$level = $this->_findLevel($xml);
+				$xml_array = (array) $xml;
+				$level = $this->_findLevel($xml_array);
 				$titolo = (string) $xml->titolo;
 				//$codesXml = $this->xml->xpath('//*[titolo="'.$titolo.'"]/ancestor-or-self::*/codice');
 				$codesXml = $this->xml->xpath('//'.$level.'[titolo="'.$titolo.'"]/ancestor-or-self::*/codice');
@@ -217,8 +242,8 @@ class atecoXml {
 	 */
 	public function tree() {
 		//unlink("data/ateco.html");
-		if(is_file("data/ateco.html")) {
-			$html = file_get_contents("data/ateco.html");
+		if(is_file(getenv('WP_BASE_PATH') . getenv('RELPATHATECO2025') . "data/ateco.html")) {
+			$html = file_get_contents(getenv('WP_BASE_PATH') . getenv('RELPATHATECO2025') . "data/ateco.html");
 			if(trim($html) != '')
 				return $html;
 		}
@@ -230,8 +255,16 @@ class atecoXml {
 		$html = $proc->transformToXML($this->xml);
 		$html = $this-> _highlightExclusion($html);
 		$html = $this->_highlightCode($html);
-		if($fh = fopen("data/ateco.html","w+"))
+		
+		$dirPath= getenv('WP_BASE_PATH') . getenv('RELPATHATECO2025') . "data/";
+		
+		if (!is_dir($dirPath)) {
+ 		   mkdir($dirPath, 0775, true); 
+		}
+
+		if($fh = fopen( $dirPath . "ateco.html","w+"))
 			fwrite($fh,$html);
+			fclose($fh);
 		return $html;
 	}
 
