@@ -100,13 +100,11 @@ class atecoXml {
 		foreach($paramSearch as  $v) {
 			if(strlen($v) > 3) {
                 $v=strtolower($v);
-				//$title = $this->xml->xpath("//titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.;:-(),', 'abcdefghijklmnopqrstuvwxyz       '),' ". $v." ')]/..");
 				$title = $this->xml->xpath("//Titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'" . trim($v) . "')]/..");
 				if(!$title) $title = array();
 				$title = $this->_cleanXml($title,$v,'Titolo');
 				
-				//$description = $this->xml->xpath("//descrizione[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.;:-,()', 'abcdefghijklmnopqrstuvwxyz       '),' ". $v." ')]/..");
-				$description = $this->xml->xpath("//Descrizione[descendant-or-self::*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" . trim($v) . "')]]/..");
+				$description = $this->xml->xpath("//Descrizione[contains(translate(string(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" . trim($v) . "')]/..");
 				if(!$description) $description = array();
 				$description = $this->_cleanXml($description,$v,'Descrizione');
 				
