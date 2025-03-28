@@ -101,14 +101,14 @@ class atecoXml {
 			if(strlen($v) > 3) {
                 $v=strtolower($v);
 				//$title = $this->xml->xpath("//titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.;:-(),', 'abcdefghijklmnopqrstuvwxyz       '),' ". $v." ')]/..");
-				$title = $this->xml->xpath("//titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'" . trim($v) . "')]/..");
+				$title = $this->xml->xpath("//Titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'" . trim($v) . "')]/..");
 				if(!$title) $title = array();
-				$title = $this->_cleanXml($title,$v,'titolo');
+				$title = $this->_cleanXml($title,$v,'Titolo');
 				
 				//$description = $this->xml->xpath("//descrizione[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.;:-,()', 'abcdefghijklmnopqrstuvwxyz       '),' ". $v." ')]/..");
-				$description = $this->xml->xpath("//descrizione[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'" . trim($v) . "')]/..");
+				$description = $this->xml->xpath("//Descrizione[descendant-or-self::*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" . trim($v) . "')]]/..");
 				if(!$description) $description = array();
-				$description = $this->_cleanXml($description,$v,'descrizione');
+				$description = $this->_cleanXml($description,$v,'Descrizione');
 				
 				$xml = array_merge($title,$description);
 				$result[$x]['xml'] = $xml;
@@ -161,18 +161,18 @@ class atecoXml {
 	 * @return int the level of the class
 	 */
 	private function _findLevel($xml) {
-		if(array_key_exists('divisione',$xml))
-			return 'sezione';
-		if(array_key_exists('gruppo',$xml))
-			return 'divisione';
-		if(array_key_exists('classe',$xml))
-			return 'gruppo';
-		elseif(array_key_exists('categoria',$xml))
-			return 'classe';
-		elseif(array_key_exists('sottocategoria',$xml))
-			return 'categoria';
+		if(array_key_exists('Divisione',$xml))
+			return 'Sezione';
+		if(array_key_exists('Gruppo',$xml))
+			return 'Divisione';
+		if(array_key_exists('Classe',$xml))
+			return 'Gruppo';
+		elseif(array_key_exists('Categoria',$xml))
+			return 'Classe';
+		elseif(array_key_exists('Sottocategoria',$xml))
+			return 'Categoria';
 		else
-			return 'sottocategoria';
+			return 'Sottocategoria';
 	}
 	/**
 	 * Build a well formed array for html rendering from matching the user parameter requested to 
@@ -187,9 +187,9 @@ class atecoXml {
 			foreach($el['xml'] as $xml) {
 				$xml_array = (array) $xml;
 				$level = $this->_findLevel($xml_array);
-				$titolo = (string) $xml->titolo;
+				$titolo = (string) $xml->Titolo;
 				//$codesXml = $this->xml->xpath('//*[titolo="'.$titolo.'"]/ancestor-or-self::*/codice');
-				$codesXml = $this->xml->xpath('//'.$level.'[titolo="'.$titolo.'"]/ancestor-or-self::*/codice');
+				$codesXml = $this->xml->xpath('//'.$level.'[Titolo="'.$titolo.'"]/ancestor-or-self::*/Codice');
 				$code = array();
 				foreach($codesXml as $ancestorCode) {
 					$code[] = (string) $ancestorCode;
@@ -200,9 +200,9 @@ class atecoXml {
                                 //die();
 				$result[$x]['section'] = $code['section'];
 				$result[$x]['code'] = $code['code'];
-				$result[$x]['title'] = $this->_highlightExclusion($xml->titolo);
+				$result[$x]['title'] = $this->_highlightExclusion($xml->Titolo);
 				$this->_highlightText($paramSearch,$result[$x]['title']);
-				$result[$x]['description'] = $this->_highlightExclusion($xml->descrizione);
+				$result[$x]['description'] = $this->_highlightExclusion($xml->Descrizione);
 				$result[$x]['description'] = $this->_highlightCode($result[$x]['description']);
 				$this->_highlightText($paramSearch,$result[$x]['description']);
 				$x++;
@@ -217,11 +217,11 @@ class atecoXml {
 	*/
 	 private function _singleResult($search) {
 		$this->_parseXml();
-		$res = $this->xml->xpath('//*[titolo="'.$search.'"]/..');
+		$res = $this->xml->xpath('//*[Titolo="'.$search.'"]/..');
 		$x = 0;
 		foreach($res as $xml) {
 			var_dump($xml->gruppo);
-			$codesXml = $this->xml->xpath('//*[titolo="'.$search.'"]/ancestor-or-self::*/codice');
+			$codesXml = $this->xml->xpath('//*[Titolo="'.$search.'"]/ancestor-or-self::*/codice');
 			$code = array();
 			foreach($codesXml as $ancestorCode) {
 				$code[] = (string) $ancestorCode;
@@ -229,7 +229,7 @@ class atecoXml {
 			$code = $this->_getCodice($code);
 			$result[$x]['section'] = $code['section'];
 			$result[$x]['code'] = $code['code'];
-			$result[$x]['title'] = $xml->titolo;
+			$result[$x]['title'] = $xml->Titolo;
 			$x++;
 		}
 		return $result;
