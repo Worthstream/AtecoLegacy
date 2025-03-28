@@ -69,53 +69,72 @@ class atecoXml {
 		return array('section'=>$codes[0],'code'=>$res);
 	}
 
-	/**
-	 * Get an XML with the response contain the dirty result (with words contained in the key and not just the key searched)
-	 * and return a clean array with the xml inside
-	 * @param array the array with the xml elements dirty
-	 * @param string the searched key
-	 * @param string the field where to find the result (titolo|descrizione)
-	 * @return array
-	 */
-	private function _cleanXml($xml,$key,$field) {
-		$xmlClean = array();
-		foreach($xml as $el) {
-			$pattern = "/(^|[^A-Za-z0-9])(".$key.")([^A-Za-z0-9]|$)/si";
-			preg_match_all($pattern,  $el->$field, $matches);
-			if($matches[1] !== array()) {
-				$xmlClean[] = $el;
-			}
-		}
-		return $xmlClean;
-	}
-	
-	/**
-	 * Find an elment contained in the titolo field, or in the descrizione field ignoring case
-	 * and building the query structure using the parameter passed from client in OR style 
-	 * ignoring the word lesser than 3 char long. Return an array with all the elements found
-	 * @return array [n=>['xml'=>array,'key'=>string]]
-	 */
-	private function _find($paramSearch = array()) {
-		$x=0;$result = array();
-		foreach($paramSearch as  $v) {
-			if(strlen($v) > 3) {
-                $v=strtolower($v);
-				$title = $this->xml->xpath("//Titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'" . trim($v) . "')]/..");
-				if(!$title) $title = array();
-				$title = $this->_cleanXml($title,$v,'Titolo');
-				
-				$description = $this->xml->xpath("//Descrizione[contains(translate(string(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" . trim($v) . "')]/..");
-				if(!$description) $description = array();
-				$description = $this->_cleanXml($description,$v,'Descrizione');
-				
-				$xml = array_merge($title,$description);
-				$result[$x]['xml'] = $xml;
-				$result[$x]['key'] = $v;
-				$x++;
-			}
-		}
-		return $result;
-	}
+    /**
+     * Finds elements within the ATECO XML data that match the search parameters.
+     *
+     * This function searches the 'Titolo' (title) and 'Descrizione' (description) fields of the ATECO XML
+     * for elements that contain any of the search terms provided in the `$paramSearch` array.
+     * The search is case-insensitive and performs an OR-style query, meaning that elements matching any
+     * of the search terms will be included in the results.  Terms shorter than 4 characters are ignored.
+     *
+     * @param array $paramSearch An array of search terms.
+     * @return array An array of results, where each element contains:
+     *               - 'xml': An array of SimpleXMLElement objects representing the XML elements found.
+     *               - 'key': The search term that was matched.
+     */
+    private function _find(array $paramSearch = []): array
+    {
+        $result = [];
+        foreach ($paramSearch as $index => $searchTerm) {
+            $searchTerm = trim(strtolower($searchTerm));
+            if (strlen($searchTerm) > 3) {
+                $titleResults = $this->xml->xpath("//Titolo[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" . $searchTerm . "')]/..");
+                $titleResults = $titleResults ?: []; // Ensure it's an array even if xpath returns false
+
+                $titleResults = $this->_cleanXml($titleResults, $searchTerm, 'Titolo');
+
+
+                $descriptionResults = $this->xml->xpath("//Descrizione[contains(translate(string(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '" . $searchTerm . "')]/..");
+                $descriptionResults = $descriptionResults ?: []; // Ensure it's an array even if xpath returns false
+
+                $descriptionResults = $this->_cleanXml($descriptionResults, $searchTerm, 'Descrizione');
+
+
+                $xmlResults = array_merge($titleResults, $descriptionResults);
+
+                $result[$index] = [
+                    'xml' => $xmlResults,
+                    'key' => $searchTerm,
+                ];
+            }
+        }
+
+        return $result;
+    }
+
+    /**
+     * Cleans a set of XML elements, filtering for those that contain the exact search key.
+     *
+     * This function refines a set of XML elements by ensuring that they contain the specified
+     * search key (`$key`) as a whole word within the given field (`$field`). It uses a regular
+     * expression to match the key, ignoring elements where the key is part of a larger word.
+     *
+     * @param array $xml An array of SimpleXMLElement objects to clean.
+     * @param string $key The search key to match.
+     * @param string $field The field in which to search for the key (e.g., 'Titolo' or 'Descrizione').
+     * @return array An array of SimpleXMLElement objects that contain the whole word search key in the specified field.
+     */
+    private function _cleanXml(array $xml, string $key, string $field): array
+    {
+        $xmlClean = [];
+        $pattern = "/(^|[^A-Za-z0-9])(" . preg_quote($key, '/') . ")([^A-Za-z0-9]|$)/si";  // Escape key for regex
+        foreach ($xml as $element) {
+            if (preg_match_all($pattern,  $element->$field, $matches) && !empty($matches[0])) {
+                $xmlClean[] = $element;
+            }
+        }
+        return $xmlClean;
+    }
 
 	/**
 	 * Find the elements in the string and add the 'atecoHighlight' class to it
