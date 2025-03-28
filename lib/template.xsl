@@ -8,14 +8,14 @@
 				<i class="fa fa-bars descrizione" title="note"></i><div class='descrizione'>
 					<xsl:choose>
 						<xsl:when test="Descrizione/INDEX">
-							<div class='last'><pre>
-								<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
+							<div class='last'>
+								<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
 									<xsl:apply-templates select="." mode="process-description"/>
 									<xsl:if test="position() != last()">
 										<br/>
 									</xsl:if>
-								</xsl:for-each>
-							</pre></div>
+								</xsl:for-each></pre>
+							</div>
 							<xsl:for-each select="Descrizione/ESCLUSIONE">
 								<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 							</xsl:for-each>
@@ -23,14 +23,14 @@
 						<xsl:otherwise>
 							<xsl:choose>
 								<xsl:when test="Descrizione/*">
-									<div class='last'><pre>
-										<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
+									<div class='last'>
+										<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
 											<xsl:apply-templates select="." mode="process-description"/>
 											<xsl:if test="position() != last()">
 												<br/>
 											</xsl:if>
-										</xsl:for-each>
-									</pre></div>
+										</xsl:for-each></pre>
+									</div>
 									<xsl:for-each select="Descrizione/ESCLUSIONE">
 										<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 									</xsl:for-each>
@@ -51,14 +51,14 @@
 					<i class="fa fa-bars descrizione" title="note"></i><div class='descrizione'>
 						<xsl:choose>
 							<xsl:when test="Descrizione/INDEX">
-								<div class='last'><pre>
-									<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
+								<div class='last'>
+									<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
 										<xsl:apply-templates select="." mode="process-description"/>
 										<xsl:if test="position() != last()">
 											<br/>
 										</xsl:if>
-									</xsl:for-each>
-								</pre></div>
+									</xsl:for-each></pre>
+								</div>
 								<xsl:for-each select="Descrizione/ESCLUSIONE">
 									<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 								</xsl:for-each>
@@ -66,14 +66,14 @@
 							<xsl:otherwise>
 								<xsl:choose>
 									<xsl:when test="Descrizione/*">
-										<div class='last'><pre>
-											<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
+										<div class='last'>
+											<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
 												<xsl:apply-templates select="." mode="process-description"/>
 												<xsl:if test="position() != last()">
 													<br/>
 												</xsl:if>
-											</xsl:for-each>
-										</pre></div>
+											</xsl:for-each></pre>
+										</div>
 										<xsl:for-each select="Descrizione/ESCLUSIONE">
 											<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 										</xsl:for-each>
@@ -94,14 +94,14 @@
 						<i class="fa fa-bars descrizione" title="note"></i><div class='descrizione'>
 							<xsl:choose>
 								<xsl:when test="Descrizione/INDEX">
-									<div class='last'><pre>
-										<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
+									<div class='last'>
+										<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
 											<xsl:apply-templates select="." mode="process-description"/>
 											<xsl:if test="position() != last()">
 												<br/>
 											</xsl:if>
-										</xsl:for-each>
-									</pre></div>
+										</xsl:for-each></pre>
+									</div>
 									<xsl:for-each select="Descrizione/ESCLUSIONE">
 										<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 									</xsl:for-each>
@@ -109,14 +109,14 @@
 								<xsl:otherwise>
 									<xsl:choose>
 										<xsl:when test="Descrizione/*">
-											<div class='last'><pre>
-												<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
+											<div class='last'>
+												<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
 													<xsl:apply-templates select="." mode="process-description"/>
 													<xsl:if test="position() != last()">
 														<br/>
 													</xsl:if>
-												</xsl:for-each>
-										</pre></div>
+												</xsl:for-each></pre>
+										</div>
 											<xsl:for-each select="Descrizione/ESCLUSIONE">
 												<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 											</xsl:for-each>
@@ -137,14 +137,14 @@
 							<i class="fa fa-bars descrizione" title="note"></i><div class='descrizione'>
 								<xsl:choose>
 									<xsl:when test="Descrizione/INDEX">
-										<div class='last'><pre>
-											<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
+										<div class='last'>
+											<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
 												<xsl:apply-templates select="." mode="process-description"/>
 												<xsl:if test="position() != last()">
 													<br/>
 												</xsl:if>
-											</xsl:for-each>
-										</pre></div>
+											</xsl:for-each></pre>
+										</div>
 										<xsl:for-each select="Descrizione/ESCLUSIONE">
 											<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 										</xsl:for-each>
@@ -152,14 +152,14 @@
 									<xsl:otherwise>
 										<xsl:choose>
 											<xsl:when test="Descrizione/*">
-												<div class='last'><pre>
-													<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
+												<div class='last'>
+													<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
 														<xsl:apply-templates select="." mode="process-description"/>
 														<xsl:if test="position() != last()">
 															<br/>
 														</xsl:if>
-													</xsl:for-each>
-												</pre></div>
+													</xsl:for-each></pre>
+												</div>
 												<xsl:for-each select="Descrizione/ESCLUSIONE">
 													<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 												</xsl:for-each>
@@ -180,14 +180,14 @@
 								<i class="fa fa-bars descrizione" title="note"></i><div class='descrizione'>
 									<xsl:choose>
 										<xsl:when test="Descrizione/INDEX">
-											<div class='last'><pre>
-												<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
+											<div class='last'>
+												<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
 													<xsl:apply-templates select="." mode="process-description"/>
 													<xsl:if test="position() != last()">
 														<br/>
 													</xsl:if>
-												</xsl:for-each>
-											</pre></div>
+												</xsl:for-each></pre>
+											</div>
 											<xsl:for-each select="Descrizione/ESCLUSIONE">
 												<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 											</xsl:for-each>
@@ -195,14 +195,14 @@
 										<xsl:otherwise>
 											<xsl:choose>
 												<xsl:when test="Descrizione/*">
-													<div class='last'><pre>
-														<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
+													<div class='last'>
+														<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
 															<xsl:apply-templates select="." mode="process-description"/>
 															<xsl:if test="position() != last()">
 																<br/>
 															</xsl:if>
-														</xsl:for-each>
-													</pre></div>
+														</xsl:for-each></pre>
+													</div>
 													<xsl:for-each select="Descrizione/ESCLUSIONE">
 														<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 													</xsl:for-each>
@@ -223,14 +223,14 @@
 								<xsl:if test="Descrizione[normalize-space()]">
 									<xsl:choose>
 										<xsl:when test="Descrizione/INDEX">
-											<div class='last'><pre>
-												<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
+											<div class='last'>
+												<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE') and not(name()='INCLUSIONE') and not(name()='INCLUSIONEAGGIUNTIVA')]">
 													<xsl:apply-templates select="." mode="process-description"/>
 													<xsl:if test="position() != last()">
 														<br/>
 													</xsl:if>
-												</xsl:for-each>
-											</pre></div>
+												</xsl:for-each></pre>
+											</div>
 											<xsl:for-each select="Descrizione/ESCLUSIONE">
 												<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 											</xsl:for-each>
@@ -238,14 +238,14 @@
 										<xsl:otherwise>
 											<xsl:choose>
 												<xsl:when test="Descrizione/*">
-													<div class='last'><pre>
-														<xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
+													<div class='last'>
+														<pre><xsl:for-each select="Descrizione/*[not(name()='ESCLUSIONE')]">
 															<xsl:apply-templates select="." mode="process-description"/>
 															<xsl:if test="position() != last()">
 																<br/>
 															</xsl:if>
-														</xsl:for-each>
-													</pre></div>
+														</xsl:for-each></pre>
+													</div>
 													<xsl:for-each select="Descrizione/ESCLUSIONE">
 														<div class='last'>Sono escluse le seguenti attività: <br/><pre><xsl:value-of select="."/></pre></div>
 													</xsl:for-each>
